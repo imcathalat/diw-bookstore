@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.card {
+    width: 275px;
+    margin: 2px;
+}
+
+.navbar{
+    height: 75px;
+}
+
+.counter {
+    background-color: red;
+    position: absolute;
+    color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    text-align: center;
+    top: -12px;
+    right: -8px;
+    padding: 0px;
+}
+
+.added {
+    opacity: 0.85;
+}
+
+.card-text{
+    height: 100px;
+    overflow: auto;
+}
+
+.card-title {
+    height: 80px;
+}
