@@ -90,11 +90,14 @@ async function renderCardSection(){
     const cardContainer = document.getElementById('card-container');
 
     let data = await fetchProductData();
+    //console.log(data.length);
 
-    for(let i=1; i<= data.length; i++){
+    for(let i=0; i<= data.length; i++){
         const card = renderCard(data[i]); //a variavel card recebe a variavel cardDiv que a função renderCard() retorna com os lugares preenchidos pelo json
         cardContainer.appendChild(card); // aqui, a variavel cardContainer adiciona aquele html de card da função renderCard com as informações vindas do json no html do index
     }
+
+    
 }
 
 async function fetchProductData() {

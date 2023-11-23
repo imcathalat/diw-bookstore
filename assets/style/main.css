@@ -12,7 +12,7 @@
 }
 
 .counter {
-    background-color: red;
+    background-color: #ADC5D9;
     position: absolute;
     color: white;
     height: 25px;
@@ -34,5 +34,11 @@
 }
 
 .card-title {
-    height: 80px;
+    height: 60px;
+}
+
+#btnAdicionar {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F2D377;
+    color: black;  
 }
