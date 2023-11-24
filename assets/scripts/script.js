@@ -15,7 +15,7 @@ function renderCard(product){
             <button type="button" class="card-button btn btn-dark" id="btnAdicionar" data-action="add">Add ao carrinho</button>
             <br>
            <a href="./details.html?id=${product.id}" class="btn btn-primary-outline">Ver detalhes</a>
-           <button type="button" class="btn position-relative" id="btnDelete" ><i class="fa-solid fa-trash-arrow-up trash btnDelete" id="${product.id}"></i></button>
+           <button type="button" class="btn position-relative" id="btnDelete" ><i class="fa-solid fa-trash-arrow-up trash btnDelete" id="${product.id}" style="color: #000000;"></i></button>
         </div>
     </div>
     `;
@@ -128,36 +128,36 @@ async function fecthProduct(productId){
 }
 
 async function deleteProduct(productId) {    
+
     try {
-        // Realizar uma requisição POST usando fetch com async/await
-        const response = await fetch(`https://json-server-e-commerce-diw--imcathalat1.repl.co/products${productId}`, {
+        const url = `https://json-server-e-commerce-diw--imcathalat1.repl.co/products/${productId}`; // Substitua pelo URL real do seu endpoint
+        const options = {
             method: 'DELETE',
             headers: {
             'Content-Type': 'application/json',
+            // Adicione outros cabeçalhos conforme necessário
             },
-        });
+        };
     
-        if (response.ok) {
-            // Produto adicionado com sucesso
-            console.log('Produto excluído com sucesso');
+        const response = await fetch(url, options);
     
-            //Redirecionar para a página de home
-            window.location.href = 'index.html';
-        } else {
-            // Lidar com erros
-            console.error('Erro ao deletar produto', response.statusText);
+        if (!response.ok) {
+            throw new Error(`Erro ao excluir o produto: ${response.status} ${response.statusText}`);
         }
+    
+        console.log('Produto excluído com sucesso');
+        window.location.href = "index.html";
+    
+        // Coloque aqui a lógica adicional após a exclusão bem-sucedida, se necessário
+    
         } catch (error) {
-            console.error('Ocorreu um erro:', error);
+        console.error('Erro durante a solicitação DELETE:', error.message);
         }
 }
 
 async function getId(productId){
     if (productId) {
-    // Chama a função para obter os detalhes do produto usando o ID
-        const product = await fecthProduct(productId);
-    // Chama outra função e passa o objeto do produto como parâmetro
-    console.log(product);
+    console.log(productId);
     deleteProduct(productId);
     } else {
         console.error('ID do produto não encontrado');
