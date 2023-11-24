@@ -24,6 +24,19 @@
     padding: 0px;
 }
 
+.trash {
+    background-color: red;
+    position: absolute;
+    color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    text-align: center;
+    top: -8px;
+    right: -130px; 
+    padding-top: 5px;
+}
+
 .added {
     opacity: 0.85;
 }
