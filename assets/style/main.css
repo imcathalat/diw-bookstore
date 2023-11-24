@@ -55,3 +55,50 @@
     background-color: #F2D377;
     color: black;  
 }
+
+@media screen and (min-width: 411px) and (max-width: 576px){
+    .trash {
+        background-color: white;
+        position: absolute;
+        color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        text-align: center;
+        top: -8px;
+        right: -200px; 
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .trash {
+        background-color: white;
+        position: absolute;
+        color: white;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        text-align: center;
+        top: -7px;
+        right: -75px; 
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .trash {
+        background-color: white;
+        position: absolute;
+        color: white;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        text-align: center;
+        top: -6px;
+        right: -110px; 
+        padding-top: 5px;
+    }
+}
+
+
