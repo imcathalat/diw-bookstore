@@ -7,8 +7,14 @@
     margin: 2px;
 }
 
+p {
+    text-align: justify;
+}
 .navbar{
-    height: 75px;
+    color: white;
+	font-weight: 400;
+	box-shadow: -48px 9px 20px 8px rgba(0,0,0,0.1);
+	background-color: rgba(255, 255, 255, 0.686);
 }
 
 .counter {
@@ -56,7 +62,11 @@
     color: black;  
 }
 
-@media screen and (min-width: 411px) and (max-width: 576px){
+.btn:focus{
+    box-shadow: none !important;
+}
+
+@media screen and (min-width: 400px) and (max-width: 576px){
     .trash {
         background-color: white;
         position: absolute;
@@ -98,6 +108,15 @@
         top: -6px;
         right: -110px; 
         padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 992px) {
+    .nav-item {
+        padding-top: 5px;
+    }
+    .meu-carrinho {
+        padding-top: 15px;
     }
 }
 

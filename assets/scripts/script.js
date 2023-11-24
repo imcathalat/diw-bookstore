@@ -15,7 +15,7 @@ function renderCard(product){
             <button type="button" class="card-button btn btn-dark" id="btnAdicionar" data-action="add">Add ao carrinho</button>
             <br>
            <a href="./details.html?id=${product.id}" class="btn btn-primary-outline">Ver detalhes</a>
-           <button type="button" class="btn position-relative" id="btnDelete" ><i class="fa-solid fa-trash-arrow-up trash btnDelete" id="${product.id}" style="color: #000000;"></i></button>
+           <button type="button" class="btn position-relative" id="btnDelete" ><i class="fa-solid fa-trash-can fa-lg trash btnDelete" id="${product.id}" style="color: #000000;"></i></button>
         </div>
     </div>
     `;
